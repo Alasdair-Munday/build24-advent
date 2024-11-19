@@ -390,16 +390,18 @@ a:visited.lego-brick {
 
 
 .sticker {
-    margin-right: 10px;
-    display: inline-block;
-    position: absolute;
-    cursor: move;
-    display: none;
+  width: 200px;
+  margin-right: 10px;
+  display: inline-block;
+  position: absolute;
+  cursor: move;
+  display: none;
 }
 
-.sticker-for-collection img {
-    max-width: 200px;
+.sticker img, .sticker-for-collection img {
+  max-width: 200px;
 }
+
 
 .sticker.flipped {
     transform: scaleX(-1.0);
