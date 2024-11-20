@@ -251,7 +251,7 @@ text-align: center;
 #stickerbookframe {
     width: 100%;
     background-color: rgb(255 255 255 / 22%);
-    height: 2000px;
+    height: 4000px;
     border-radius: 20px;
   }
   
@@ -390,7 +390,7 @@ a:visited.lego-brick {
 
 
 .sticker {
-  width: 200px;
+  width: auto;
   margin-right: 10px;
   display: inline-block;
   position: absolute;
@@ -398,7 +398,7 @@ a:visited.lego-brick {
   display: none;
 }
 
-.sticker img, .sticker-for-collection img {
+ .sticker-for-collection img {
   max-width: 200px;
 }
 
@@ -413,7 +413,7 @@ a:visited.lego-brick {
 
 .stable-bg {
     height: 100%;
-    width: 1000px;
+    width: 4000px;
 }
 
 .grow { transition: all .2s ease-in-out; }
