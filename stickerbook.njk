@@ -6,6 +6,7 @@ permalink: /stickerbook/index.html
 $(document).ready(function() {
   $(window).on('resize', function() {
     const currentWidth = $('#stickerbookframe').parent().width();
+    const iframeHeight = $('#stickerbookframe').height();
     const {top: iTop, left: iLeft} = $('#stickerbookframe').position();
 
     const baseWidth = 4000; // Adjust the base width as needed
@@ -14,8 +15,13 @@ $(document).ready(function() {
 
     $('#stickerbookframe').css({
       transform: `scale(${zoomFactor})`,
-      width: currentWidth * 1/zoomFactor,
+      width: currentWidth * 1/zoomFactor + "px",
     });
+
+    $('#stickerbookframe').parent().css({
+      height: iframeHeight * zoomFactor,
+    });
+
 
     const { top: newTop, left: newLeft } = $('#stickerbookframe').position();
     const translateX = iLeft - newLeft;
@@ -24,7 +30,6 @@ $(document).ready(function() {
     $('#stickerbookframe').css({
       transform: `translate(${translateX}px, ${translateY}px) scale(${zoomFactor})`,
     })
-
   });
 
   // Initial zoom
