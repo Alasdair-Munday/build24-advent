@@ -243,7 +243,7 @@ text-align: center;
 
 #stable{
   position:fixed;
-  top: 500px;
+  top: 300px;
   z-index: -100;
 }
 
